@@ -21,52 +21,52 @@ interface Booking {
 const tableData: Booking[] = [
   {
     id: 1,
-    name: "John Doe",
-    date: "2025-02-27",
-    price: "$120.00",
+    name: "Erneste",
+    date: "1/03/2025",
+    price: "800FRW",
     departureTime: "08:30 AM",
-    start: "New York",
-    destination: "Washington DC",
+    start: "Huye",
+    destination: "Rubavu",
     status: "Completed",
   },
   {
     id: 2,
-    name: "Alice Smith",
-    date: "2025-02-28",
-    price: "$90.00",
+    name: "UWAYO Pascaline",
+    date: "1/03/2025",
+    price: "800FRW",
     departureTime: "10:00 AM",
-    start: "Los Angeles",
-    destination: "San Francisco",
+    start: "Kigali",
+    destination: "Musanze",
     status: "Pending",
   },
   {
     id: 3,
-    name: "Michael Johnson",
-    date: "2025-02-29",
-    price: "$150.00",
+    name: "Saly Nelson",
+    date: "1/03/2025",
+    price: "800FRW",
     departureTime: "07:45 AM",
-    start: "Chicago",
-    destination: "Detroit",
+    start: "Kigali",
+    destination: "Nyagatare",
     status: "Completed",
   },
   {
     id: 4,
-    name: "Emily White",
-    date: "2025-03-01",
-    price: "$80.00",
+    name: "RUKUNDO Bahati",
+    date: "1/03/2025",
+    price: "800FRW",
     departureTime: "02:15 PM",
-    start: "Boston",
+    start: "Kigali",
     destination: "New York",
     status: "Canceled",
   },
   {
     id: 5,
-    name: "Robert Brown",
-    date: "2025-03-02",
-    price: "$110.00",
+    name: "Dushimire Aine",
+    date: "1/03/2025",
+    price: "800FRW",
     departureTime: "05:30 PM",
-    start: "Miami",
-    destination: "Orlando",
+    start: "Kigali",
+    destination: "Rusizi",
     status: "Pending",
   },
 ];
@@ -122,19 +122,23 @@ export default function RecentBookings() {
                 <TableCell className="px-4 py-3">{booking.name}</TableCell>
                 <TableCell className="px-4 py-3">{booking.date}</TableCell>
                 <TableCell className="px-4 py-3">{booking.price}</TableCell>
-                <TableCell className="px-4 py-3">{booking.departureTime}</TableCell>
+                <TableCell className="px-4 py-3">
+                  {booking.departureTime}
+                </TableCell>
                 <TableCell className="px-4 py-3">{booking.start}</TableCell>
-                <TableCell className="px-4 py-3">{booking.destination}</TableCell>
+                <TableCell className="px-4 py-3">
+                  {booking.destination}
+                </TableCell>
                 <TableCell className="px-4 py-3">
                   <Badge
                     size="sm"
-                    className={`px-2 py-1 rounded-lg ${
+                    color={
                       booking.status === "Completed"
-                        ? "bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300"
+                        ? "success"
                         : booking.status === "Pending"
-                        ? "bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300"
-                        : "bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-300"
-                    }`}
+                        ? "warning"
+                        : "error"
+                    }
                   >
                     {booking.status}
                   </Badge>
