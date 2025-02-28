@@ -84,25 +84,25 @@ export default function RecentBookings() {
           {/* Table Header */}
           <TableHeader className="border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-800">
             <TableRow>
-              <TableCell isHeader className="px-4 py-3 text-left">
+              <TableCell isHeader className="px-4 py-3 text-left dark:text-white">
                 Name
               </TableCell>
-              <TableCell isHeader className="px-4 py-3 text-left">
+              <TableCell isHeader className="px-4 py-3 text-left dark:text-white">
                 Date
               </TableCell>
-              <TableCell isHeader className="px-4 py-3 text-left">
+              <TableCell isHeader className="px-4 py-3 text-left dark:text-white">
                 Price
               </TableCell>
-              <TableCell isHeader className="px-4 py-3 text-left">
+              <TableCell isHeader className="px-4 py-3 text-left dark:text-white">
                 Departure Time
               </TableCell>
-              <TableCell isHeader className="px-4 py-3 text-left">
+              <TableCell isHeader className="px-4 py-3 text-left dark:text-white">
                 Start
               </TableCell>
-              <TableCell isHeader className="px-4 py-3 text-left">
+              <TableCell isHeader className="px-4 py-3 text-left dark:text-white">
                 Destination
               </TableCell>
-              <TableCell isHeader className="px-4 py-3 text-left">
+              <TableCell isHeader className="px-4 py-3 text-left dark:text-white">
                 Status
               </TableCell>
             </TableRow>
@@ -119,14 +119,14 @@ export default function RecentBookings() {
                     : "bg-white dark:bg-gray-900/50"
                 } hover:bg-gray-100 dark:hover:bg-gray-800`}
               >
-                <TableCell className="px-4 py-3">{booking.name}</TableCell>
-                <TableCell className="px-4 py-3">{booking.date}</TableCell>
-                <TableCell className="px-4 py-3">{booking.price}</TableCell>
-                <TableCell className="px-4 py-3">
+                <TableCell className="px-4 py-3 dark:text-white">{booking.name}</TableCell>
+                <TableCell className="px-4 py-3 dark:text-white">{booking.date}</TableCell>
+                <TableCell className="px-4 py-3 dark:text-white">{booking.price}</TableCell>
+                <TableCell className="px-4 py-3 dark:text-white">
                   {booking.departureTime}
                 </TableCell>
-                <TableCell className="px-4 py-3">{booking.start}</TableCell>
-                <TableCell className="px-4 py-3">
+                <TableCell className="px-4 py-3 dark:text-white">{booking.start}</TableCell>
+                <TableCell className="px-4 py-3 dark:text-white">
                   {booking.destination}
                 </TableCell>
                 <TableCell className="px-4 py-3">
