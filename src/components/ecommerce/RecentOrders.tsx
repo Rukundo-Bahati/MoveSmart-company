@@ -7,19 +7,17 @@ import {
 } from "../ui/table";
 import Badge from "../ui/badge/Badge";
 
-// Define the TypeScript interface for transport bookings
 interface Booking {
   id: number;
-  name: string; // Passenger Name
-  date: string; // Date of travel
-  price: string; // Ticket price
-  departureTime: string; // Departure time
-  start: string; // Starting location
-  destination: string; // Destination
-  status: "Completed" | "Pending" | "Canceled"; // Booking status
+  name: string;
+  date: string;
+  price: string;
+  departureTime: string;
+  start: string;
+  destination: string;
+  status: "Completed" | "Pending" | "Canceled";
 }
 
-// Sample transport bookings data
 const tableData: Booking[] = [
   {
     id: 1,
@@ -75,47 +73,68 @@ const tableData: Booking[] = [
 
 export default function RecentBookings() {
   return (
-    <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white px-4 pb-3 pt-4 dark:border-gray-800 dark:bg-white/[0.03] sm:px-6">
-      <div className="flex flex-col gap-2 mb-4 sm:flex-row sm:items-center sm:justify-between">
-        <h3 className="text-lg font-semibold text-gray-800 dark:text-white/90">
+    <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg px-6 pb-4 pt-5 dark:border-gray-800 dark:bg-white/[0.05]">
+      <div className="flex flex-col gap-2 mb-5 sm:flex-row sm:items-center sm:justify-between">
+        <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
           Recent Bookings
         </h3>
       </div>
       <div className="max-w-full overflow-x-auto">
-        <Table>
+        <Table className="w-full border-collapse">
           {/* Table Header */}
-          <TableHeader className="border-gray-100 dark:border-gray-800 border-y">
+          <TableHeader className="border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-800">
             <TableRow>
-              <TableCell isHeader>Name</TableCell>
-              <TableCell isHeader>Date</TableCell>
-              <TableCell isHeader>Price</TableCell>
-              <TableCell isHeader>Departure Time</TableCell>
-              <TableCell isHeader>Start</TableCell>
-              <TableCell isHeader>Destination</TableCell>
-              <TableCell isHeader>Status</TableCell>
+              <TableCell isHeader className="px-4 py-3 text-left">
+                Name
+              </TableCell>
+              <TableCell isHeader className="px-4 py-3 text-left">
+                Date
+              </TableCell>
+              <TableCell isHeader className="px-4 py-3 text-left">
+                Price
+              </TableCell>
+              <TableCell isHeader className="px-4 py-3 text-left">
+                Departure Time
+              </TableCell>
+              <TableCell isHeader className="px-4 py-3 text-left">
+                Start
+              </TableCell>
+              <TableCell isHeader className="px-4 py-3 text-left">
+                Destination
+              </TableCell>
+              <TableCell isHeader className="px-4 py-3 text-left">
+                Status
+              </TableCell>
             </TableRow>
           </TableHeader>
 
           {/* Table Body */}
-          <TableBody className="divide-y divide-gray-100 dark:divide-gray-800">
-            {tableData.map((booking) => (
-              <TableRow key={booking.id}>
-                <TableCell>{booking.name}</TableCell>
-                <TableCell>{booking.date}</TableCell>
-                <TableCell>{booking.price}</TableCell>
-                <TableCell>{booking.departureTime}</TableCell>
-                <TableCell>{booking.start}</TableCell>
-                <TableCell>{booking.destination}</TableCell>
-                <TableCell>
+          <TableBody className="divide-y divide-gray-200 dark:divide-gray-700">
+            {tableData.map((booking, index) => (
+              <TableRow
+                key={booking.id}
+                className={`transition-all ${
+                  index % 2 === 0
+                    ? "bg-gray-50 dark:bg-gray-900/30"
+                    : "bg-white dark:bg-gray-900/50"
+                } hover:bg-gray-100 dark:hover:bg-gray-800`}
+              >
+                <TableCell className="px-4 py-3">{booking.name}</TableCell>
+                <TableCell className="px-4 py-3">{booking.date}</TableCell>
+                <TableCell className="px-4 py-3">{booking.price}</TableCell>
+                <TableCell className="px-4 py-3">{booking.departureTime}</TableCell>
+                <TableCell className="px-4 py-3">{booking.start}</TableCell>
+                <TableCell className="px-4 py-3">{booking.destination}</TableCell>
+                <TableCell className="px-4 py-3">
                   <Badge
                     size="sm"
-                    color={
+                    className={`px-2 py-1 rounded-lg ${
                       booking.status === "Completed"
-                        ? "success"
+                        ? "bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300"
                         : booking.status === "Pending"
-                        ? "warning"
-                        : "error"
-                    }
+                        ? "bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300"
+                        : "bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-300"
+                    }`}
                   >
                     {booking.status}
                   </Badge>
