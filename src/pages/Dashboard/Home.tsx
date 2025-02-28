@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <PageMeta
-        title="MoveSmart Company Admin"
+        title="M.Smat-Company Admin"
         description="This is Yitegere webapp for company admins to control and manage the buses and tickets"
       />
       <div className="grid grid-cols-12 gap-4 md:gap-6">
@@ -22,7 +22,7 @@ export default function Home() {
       
         <div className="col-span-12 xl:col-span-5">
           <StatisticsChart
-            title="Monthly Sales"
+            title=" Total Clients"
             series={[
               {
                 name: "Clients",
@@ -42,7 +42,7 @@ export default function Home() {
 
         <div className="col-span-12 xl:col-span-5">
           <StatisticsChart
-            title="Monthly Sales"
+            title="Total Income"
             series={[
               {
                 name: "Clients",

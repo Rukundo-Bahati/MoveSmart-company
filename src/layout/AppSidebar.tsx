@@ -1,13 +1,11 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router";
-
+import { BookOpenIcon, LucideBusFront,CircleDollarSign,SlidersVertical } from "lucide-react";
 
 // Assume these icons are imported from an icon library
 import {
-  CalenderIcon,
   GridIcon,
   HorizontaLDots,
-  UserCircleIcon,
   
 } from "../icons";
 import { useSidebar } from "../context/SidebarContext";
@@ -26,22 +24,22 @@ const navItems: NavItem[] = [
     path: "/",
   },
   {
-    icon: <CalenderIcon />,
+    icon: <BookOpenIcon />,
     name: "Bookings",
-    path: "/calendar",
+    path: "/bookings",
   },
   {
-    icon: <UserCircleIcon />,
+    icon: <LucideBusFront />,
     name: "Vehicles",
     path: "/vehicles",
   },
   {
-    icon: <UserCircleIcon />,
+    icon: <CircleDollarSign />,
     name: "Payments",
     path: "/payments",
   },
   {
-    icon: <UserCircleIcon />,
+    icon: <SlidersVertical />,
     name: "Analytics",
     path: "/analytics",
   },

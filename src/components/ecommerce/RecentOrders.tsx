@@ -56,7 +56,7 @@ const tableData: Booking[] = [
     price: "800FRW",
     departureTime: "02:15 PM",
     start: "Kigali",
-    destination: "New York",
+    destination: "Rwamagana",
     status: "Canceled",
   },
   {
