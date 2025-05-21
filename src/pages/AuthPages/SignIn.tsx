@@ -7,7 +7,7 @@ export default function SignIn() {
     <>
       <PageMeta
         title="MoveSmart Company Admin"
-        description="This is Yitegere webapp for company admins to control and manage the buses and tickets"
+        description="This is MoveSmart webapp for company admins to control and manage the buses and tickets"
       />
       <AuthLayout>
         <SignInForm />

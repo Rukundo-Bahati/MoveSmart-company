@@ -17,6 +17,7 @@ import FormElements from "./pages/Forms/FormElements";
 import Blank from "./pages/Blank";
 import AppLayout from "./layout/AppLayout";
 import { ScrollToTop } from "./components/common/ScrollToTop";
+import Vehicle from "./pages/Vehicle";
 import Home from "./pages/Dashboard/Home";
 
 export default function App() {
@@ -47,6 +48,7 @@ export default function App() {
             <Route path="/buttons" element={<Buttons />} />
             <Route path="/images" element={<Images />} />
             <Route path="/videos" element={<Videos />} />
+            <Route path="/vehicles" element={<Vehicle />} />
 
             {/* Charts */}
             <Route path="/line-chart" element={<LineChart />} />
