@@ -1,5 +1,4 @@
-import React from 'react';
-import { Car } from '../../types/car';
+import { Car } from '../../types/car'; 
 import CarCard from './CarCard';
 
 interface CarGridProps {

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Car } from '../../types/car';
 import { Edit, Trash } from 'lucide-react';
 import { toast } from 'sonner';
@@ -58,7 +57,7 @@ const CarCard: React.FC<CarCardProps> = ({ car, onEdit, onDelete }) => {
         <div className="mt-4 flex justify-between">
           <Button 
             variant="outline" 
-            size="icon" 
+            size={"icon" as any}
             className="h-8 w-8" 
             onClick={handleEdit}
           >
@@ -66,7 +65,7 @@ const CarCard: React.FC<CarCardProps> = ({ car, onEdit, onDelete }) => {
           </Button>
           <Button 
             variant="outline" 
-            size="icon" 
+            size={"icon" as any}
             className="h-8 w-8" 
             onClick={handleDelete}
           >

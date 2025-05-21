@@ -1,8 +1,6 @@
 import  { useState } from 'react';
 import { ChevronDown, TrendingUp, TrendingDown } from 'lucide-react';
 import { 
-  LineChart, 
-  Line, 
   XAxis, 
   YAxis, 
   CartesianGrid, 
