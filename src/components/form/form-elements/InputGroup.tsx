@@ -7,7 +7,7 @@ import PhoneInput from "../group-input/PhoneInput";
 export default function InputGroup() {
   const countries = [
     { code: "US", label: "+1" },
-    { code: "GB", label: "+44" },
+    { code: "RW", label: "+250" },
     { code: "CA", label: "+1" },
     { code: "AU", label: "+61" },
   ];
@@ -35,7 +35,7 @@ export default function InputGroup() {
           <PhoneInput
             selectPosition="start"
             countries={countries}
-            placeholder="+1 (555) 000-0000"
+            placeholder="+250700000000"
             onChange={handlePhoneNumberChange}
           />
         </div>{" "}
@@ -44,7 +44,7 @@ export default function InputGroup() {
           <PhoneInput
             selectPosition="end"
             countries={countries}
-            placeholder="+1 (555) 000-0000"
+            placeholder="+250700000000"
             onChange={handlePhoneNumberChange}
           />
         </div>

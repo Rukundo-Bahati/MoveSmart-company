@@ -164,7 +164,7 @@ export default function UserMetaCard() {
                     <Label>Facebook</Label>
                     <Input
                       type="text"
-                      value="https://www.facebook.com/Rukundo"
+                      value="https://www.facebook.com/rukundo.bahatisamuel.3"
                     />
                   </div>
 

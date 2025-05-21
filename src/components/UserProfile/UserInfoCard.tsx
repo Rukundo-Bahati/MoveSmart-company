@@ -125,7 +125,7 @@ export default function UserInfoCard() {
                     <Label>Linkedin</Label>
                     <Input
                       type="text"
-                      value="wwww.linkedin.com/in/rukundo-bahati-293578302"
+                      value="wwww.linkedin.com/in/rukundo-bahati"
                     />
                   </div>
 

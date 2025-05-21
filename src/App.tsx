@@ -21,16 +21,20 @@ import Vehicle from "./pages/Vehicle";
 import Home from "./pages/Dashboard/Home";
 import Payments from "./pages/payments/Payments";
 import Analytics from "./components/analytics/Analtytics";
+import { AuthProvider } from "./pages/AuthPages/AuthContext";
+import ProtectedRoute from "./pages/AuthPages/ProtectedRoute";
+
 
 export default function App() {
   return (
-    <>
+    <AuthProvider>
       <Router>
         <ScrollToTop />
         <Routes>
           {/* Dashboard Layout */}
           <Route element={<AppLayout />}>
             <Route index path="/" element={<Home />} />
+            <Route path="/home" element={<ProtectedRoute element={<Home />} />} /> {/* Protected Route */}
 
             {/* Others Page */}
             <Route path="/profile" element={<UserProfiles />} />
@@ -67,6 +71,6 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
-    </>
+    </AuthProvider>
   );
 }
