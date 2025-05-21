@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import  { useState, useMemo } from "react";
 import CarGrid from "../components/car/CarGrid";
 import { Car } from "../types/car";
 import { mockCars } from "../data/mockCars";

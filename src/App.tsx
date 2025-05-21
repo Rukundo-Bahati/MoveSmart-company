@@ -19,6 +19,8 @@ import AppLayout from "./layout/AppLayout";
 import { ScrollToTop } from "./components/common/ScrollToTop";
 import Vehicle from "./pages/Vehicle";
 import Home from "./pages/Dashboard/Home";
+import Payments from "./pages/payments/Payments";
+import Analytics from "./components/analytics/Analtytics";
 
 export default function App() {
   return (
@@ -49,6 +51,8 @@ export default function App() {
             <Route path="/images" element={<Images />} />
             <Route path="/videos" element={<Videos />} />
             <Route path="/vehicles" element={<Vehicle />} />
+            <Route path="/payments" element={<Payments />} />
+            <Route path="/analytics" element={<Analytics />} />
 
             {/* Charts */}
             <Route path="/line-chart" element={<LineChart />} />
